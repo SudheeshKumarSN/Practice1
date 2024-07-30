@@ -1,0 +1,13 @@
+#!/bin/bash
+<< 'COMMENT'
+for num in {1..9}
+do 
+   touch File{$num}.txt
+done
+.
+COMMENT
+
+num=$1
+for (( i=1; i<=num; i++ )); do 
+      touch	File$i.txt
+done
